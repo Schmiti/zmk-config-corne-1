@@ -91,10 +91,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DLLR         &kp PRCNT    &kp AT_SIGN    &kp AMPERSAND    &kp ASTRK      &kp SINGLE_QUOTE  &kp GRAVE          &trans
-&trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL    &kp BACKSLASH  &kp KP_PLUS      &kp KP_MINUS   &kp SLASH         &kp DOUBLE_QUOTES  &trans
-&trans  &kp TILDE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE   &kp HASH     &kp PIPE       &kp EXCLAMATION  &kp SEMICOLON  &kp COLON         &kp QUESTION       &trans
-                                              &bt BT_NXT             &trans           &trans       &trans         &trans           &trans
+&trans      &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DLLR         &kp PRCNT    &kp AT_SIGN    &kp AMPERSAND    &kp ASTRK      &kp SINGLE_QUOTE  &kp GRAVE          &trans
+&trans      &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL    &kp BACKSLASH  &kp KP_PLUS      &kp KP_MINUS   &kp SLASH         &kp DOUBLE_QUOTES  &trans
+&bt BT_CLR  &kp TILDE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE   &kp HASH     &kp PIPE       &kp EXCLAMATION  &kp SEMICOLON  &kp COLON         &kp QUESTION       &trans
+                                                  &bt BT_NXT             &trans           &trans       &trans         &trans           &trans
             >;
         };
     };
