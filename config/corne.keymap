@@ -17,13 +17,13 @@
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
 
-        e_aigu_tap_dance: e_aigu_tap_dance {
+        e_accents_tap_dance: e_accents_tap_dance {
             compatible = "zmk,behavior-tap-dance";
-            label = "E_AIGU_TAP_DANCE";
+            label = "E_ACCENTS_TAP_DANCE";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&e_aigu>;
+            bindings = <&kp E>, <&e_aigu>, <&e_grave>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
     };
 
@@ -48,6 +48,13 @@
             bindings = <&kp SQT &kp E>;
             label = "NEW_MACRO";
         };
+
+        e_grave: e_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp E>;
+            label = "E_GRAVE";
+        };
     };
 
     keymap {
@@ -61,10 +68,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE            &kp Q  &kp C  &kp O              &kp P      &kp W               &kp J      &kp M      &kp D  &kp EXCLAMATION  &kp Y  &kp BSPC
-&kp TAB               &kp A  &kp S  &e_aigu_tap_dance  &kp N      &kp F               &kp L      &kp R      &kp T  &kp I            &kp U  &kp RET
-&caps_lock_tap_dance  &kp Z  &kp X  &kp QUESTION       &kp V      &kp B               &kp COLON  &kp H      &kp G  &kp SEMI         &kp K  &kp RSHIFT
-                                    &kp LEFT_ALT       &kp LCTRL  &kp LEFT_COMMAND    &mo 1      &kp SPACE  &mo 2
+&kp ESCAPE            &kp Q  &kp C  &kp O                 &kp P      &kp W               &kp J      &kp M      &kp D  &kp EXCLAMATION  &kp Y  &kp BSPC
+&kp TAB               &kp A  &kp S  &e_accents_tap_dance  &kp N      &kp F               &kp L      &kp R      &kp T  &kp I            &kp U  &kp RET
+&caps_lock_tap_dance  &kp Z  &kp X  &kp QUESTION          &kp V      &kp B               &kp COLON  &kp H      &kp G  &kp DOT          &kp K  &kp RSHIFT
+                                    &kp LEFT_ALT          &kp LCTRL  &kp LEFT_COMMAND    &mo 1      &kp SPACE  &mo 2
             >;
         };
 
@@ -76,9 +83,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &none             &kp HOME           &kp UP      &kp END       &kp PAGE_UP      &kp SLASH       &kp N7  &kp N8  &kp N9  &none    &trans
-&trans  &none             &kp LEFT           &kp DOWN    &kp RIGHT     &kp PAGE_DOWN    &kp UNDERSCORE  &kp N4  &kp N5  &kp N6  &kp N0   &trans
-&trans  &kp C_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOL_UP  &none            &kp COMMA       &kp N1  &kp N2  &kp N3  &kp DOT  &trans
+&trans  &none             &kp HOME           &kp UP      &kp END       &kp PAGE_UP      &kp SLASH       &kp N7  &kp N8  &kp N9  &none     &trans
+&trans  &none             &kp LEFT           &kp DOWN    &kp RIGHT     &kp PAGE_DOWN    &kp UNDERSCORE  &kp N4  &kp N5  &kp N6  &kp N0    &trans
+&trans  &kp C_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOL_UP  &none            &kp COMMA       &kp N1  &kp N2  &kp N3  &kp SEMI  &trans
                                              &trans      &trans        &trans           &trans          &trans  &trans
             >;
         };
