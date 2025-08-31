@@ -68,10 +68,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE            &kp Q  &kp C  &kp O                 &kp P      &kp W               &kp J      &kp M      &kp D  &kp EXCLAMATION  &kp Y  &kp BSPC
-&kp TAB               &kp A  &kp S  &e_accents_tap_dance  &kp N      &kp F               &kp L      &kp R      &kp T  &kp I            &kp U  &kp RET
-&caps_lock_tap_dance  &kp Z  &kp X  &kp QUESTION          &kp V      &kp B               &kp COLON  &kp H      &kp G  &kp DOT          &kp K  &kp RSHIFT
-                                    &kp LEFT_ALT          &kp LCTRL  &kp LEFT_COMMAND    &mo 1      &kp SPACE  &mo 2
+&kp ESCAPE            &kp Q  &kp C  &kp O         &kp P      &kp W               &kp J      &kp M      &kp D  &kp EXCLAMATION  &kp Y  &kp BSPC
+&kp TAB               &kp A  &kp S  &kp E         &kp N      &kp F               &kp L      &kp R      &kp T  &kp I            &kp U  &kp RET
+&caps_lock_tap_dance  &kp Z  &kp X  &kp QUESTION  &kp V      &kp B               &kp COLON  &kp H      &kp G  &kp DOT          &kp K  &kp RSHIFT
+                                    &kp LEFT_ALT  &kp LCTRL  &kp LEFT_COMMAND    &mo 1      &kp SPACE  &mo 2
             >;
         };
 
