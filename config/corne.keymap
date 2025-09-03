@@ -106,7 +106,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp SPACE>;
-            label = "A_GRAVE";
+            label = "APOSTROPH";
         };
     };
 
