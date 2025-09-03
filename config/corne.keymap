@@ -73,7 +73,9 @@
     };
 
     macros {
-        e_aigu: new_macro {
+        e_aigu: e_aigu {
+            wait-ms = <0>;
+            tap-ms = <0>;
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SQT &kp E>;
@@ -81,10 +83,30 @@
         };
 
         e_grave: e_grave {
+            wait-ms = <0>;
+            tap-ms = <0>;
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp E>;
             label = "E_GRAVE";
+        };
+
+        a_grave: a_grave {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp A>;
+            label = "A_GRAVE";
+        };
+
+        apostroph: apostroph {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp A>;
+            label = "A_GRAVE";
         };
     };
 
@@ -102,7 +124,7 @@
 &kp ESCAPE            &kp Q                &kp C            &kp O          &kp P            &kp W    &kp J                    &kp M         &kp D         &kp EXCLAMATION  &kp Y                &kp BSPC
 &kp TAB               &hml LEFT_COMMAND A  &hml LEFT_ALT S  &hml LSHFT E   &hml LCTRL N     &kp F    &kp L                    &hmr LCTRL R  &hmr LSHFT T  &hmr LEFT_ALT I  &hmr LEFT_COMMAND U  &kp RET
 &caps_lock_tap_dance  &kp Z                &kp X            &kp QUESTION   &kp V            &kp B    &kp COLON                &kp H         &kp G         &kp DOT          &kp K                &kp RSHIFT
-                                                            &kp LEFT_ALT   &kp LCTRL        &mo 2    &layer_1_lock_tap_dance  &kp SPACE     &mo 2
+                                                            &kp LEFT_ALT   &kp LCTRL        &mo 2    &layer_1_lock_tap_dance  &kp SPACE     &sl 3
             >;
         };
 
@@ -133,6 +155,16 @@
 &trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL    &kp BACKSLASH  &kp KP_PLUS      &kp KP_MINUS   &kp SLASH         &kp DOUBLE_QUOTES  &trans
 &trans  &kp TILDE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE   &kp HASH     &kp PIPE       &kp EXCLAMATION  &kp SEMICOLON  &kp COLON         &kp QUESTION       &trans
                                               &bt BT_NXT             &trans           &trans       &trans         &trans           &trans
+            >;
+        };
+
+        accents {
+
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &a_grave  &trans  &e_aigu  &e_grave  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+                        &trans  &apostroph  &trans  &trans  &trans  &trans
             >;
         };
     };
