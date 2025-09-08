@@ -188,10 +188,10 @@
         accents {
 
             bindings = <
-&trans  &trans    &trans   &o_caret  &trans      &trans  &trans  &trans  &trans  &trans  &trans    &trans  
-&trans  &a_grave  &e_aigu  &e_grave  &e_caret    &trans  &trans  &trans  &trans  &trans  &u_grave  &trans  
-&trans  &trans    &trans   &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans    &trans  
-                           &trans    &apostroph  &trans  &trans  &trans  &trans
+&trans  &trans    &trans   &o_caret  &trans    &trans  &trans  &trans      &trans  &trans  &trans    &trans  
+&trans  &a_grave  &e_aigu  &e_grave  &e_caret  &trans  &trans  &trans      &trans  &trans  &u_grave  &trans  
+&trans  &trans    &trans   &trans    &trans    &trans  &trans  &trans      &trans  &trans  &trans    &trans  
+                           &trans    &trans    &trans  &trans  &apostroph  &trans
             >;
         };
     };
