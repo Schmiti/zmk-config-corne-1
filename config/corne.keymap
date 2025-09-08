@@ -63,12 +63,12 @@
 
         enter_combo_right {
             bindings = <&kp ENTER>;
-            key-positions = <19 20 21>;
+            key-positions = <20 21>;
         };
 
         enter_combo_left {
             bindings = <&kp ENTER>;
-            key-positions = <14 15 16>;
+            key-positions = <14 15>;
         };
     };
 
