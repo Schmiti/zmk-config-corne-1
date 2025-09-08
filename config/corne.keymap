@@ -135,6 +135,19 @@
             bindings = <&kp SQT &kp SPACE>;
             label = "APOSTROPH";
         };
+
+        c_cedilla: c_cedilla {
+            wait-ms = <0>;
+            tap-ms = <0>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings 
+              = <&macro_press &kp RIGHT_ALT>
+              , <&macro_tap &kp COMMA>
+              , <&macro_release &kp RIGHT_ALT>
+            ;
+            label = "C_CEDILLA";
+        };
     };
 
     keymap {
@@ -188,10 +201,10 @@
         accents {
 
             bindings = <
-&trans  &trans    &trans   &o_caret  &trans    &trans  &trans  &trans      &trans  &trans  &trans    &trans  
-&trans  &a_grave  &e_aigu  &e_grave  &e_caret  &trans  &trans  &trans      &trans  &trans  &u_grave  &trans  
-&trans  &trans    &trans   &trans    &trans    &trans  &trans  &trans      &trans  &trans  &trans    &trans  
-                           &trans    &trans    &trans  &trans  &apostroph  &trans
+&trans  &trans    &c_cedilla  &o_caret  &trans    &trans  &trans  &trans      &trans  &trans  &trans    &trans  
+&trans  &a_grave  &e_aigu     &e_grave  &e_caret  &trans  &trans  &trans      &trans  &trans  &u_grave  &trans  
+&trans  &trans    &trans      &trans    &trans    &trans  &trans  &trans      &trans  &trans  &trans    &trans  
+                              &trans    &trans    &trans  &trans  &apostroph  &trans
             >;
         };
     };
